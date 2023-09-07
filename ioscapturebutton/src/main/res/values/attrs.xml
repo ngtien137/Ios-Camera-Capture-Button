@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="CaptureVideoButton">
-        <attr name="cvb_drawable_take_photo_size" format="dimension" />
+        <attr name="cvb_drawable_size_take_photo" format="dimension" />
         <attr name="cvb_drawable_size_record" format="dimension" />
+
         <attr name="cvb_drawable_take_photo" format="reference" />
         <attr name="cvb_drawable_record" format="reference" />
+        <attr name="cvb_background_record" format="reference" />
+
+        <attr name="cvb_mode" format="enum">
+            <enum name="take_photo" value="0"/>
+            <enum name="record" value="1"/>
+        </attr>
     </declare-styleable>
 </resources>

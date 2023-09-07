@@ -6,13 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:keepScreenOn="true"
+        app:cameraAudio="off"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        app:cameraEngine="camera2"
+        app:cameraFacing="back"
+        app:cameraFlash="off"
+        app:cameraGesturePinch="zoom"
+        app:cameraGrid="draw3x3"
+        app:cameraHdr="on"
+        app:cameraMode="video"
+        app:cameraPictureFormat="jpeg"
+        app:cameraPictureSizeBiggest="true"
+        app:cameraPictureSizeSmallest="true"
+        app:cameraPreview="texture"
+        app:cameraPreviewFrameRate="60"
+        app:cameraPreviewFrameRateExact="true"
+        app:cameraRequestPermissions="true"
+        app:cameraUseDeviceOrientation="true"
+        app:cameraVideoCodec="deviceDefault"
+        app:cameraVideoSizeBiggest="true"
+        app:cameraVideoSizeSmallest="true"
+        app:cameraWhiteBalance="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.otaliastudios.cameraview.CameraView>
+
+    <com.tienuu.lib.camera.ioscapturebutton.CaptureVideoButton
+        android:id="@+id/btnCaptureVideo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cvb_mode="record"
+        android:layout_marginBottom="16dp"
+        app:cvb_background_record="@drawable/background_button_record"
+        app:cvb_drawable_record="@drawable/button_record"
+        app:cvb_drawable_size_record="60dp"
+        app:cvb_drawable_take_photo="@drawable/button_take_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

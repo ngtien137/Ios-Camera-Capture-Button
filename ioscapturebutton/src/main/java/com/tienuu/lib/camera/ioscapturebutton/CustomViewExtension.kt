@@ -22,6 +22,11 @@ fun RectF.setCenter(cX: Number, cY: Number, sizeX: Number, sizeY: Number) {
     set(centerX - width / 2f, centerY - height / 2f, centerX + width / 2f, centerY + height / 2f)
 }
 
+fun RectF.toRect() = Rect().also { it ->
+    it.set(this.left, this.top, this.right, this.bottom)
+    it
+}
+
 fun RectF.setCenterX(cX: Number, sizeX: Number) {
     val centerX = cX.toFloat()
     val width = sizeX.toFloat()
@@ -111,6 +116,7 @@ fun Bitmap.scaleBitmap(width: Number, height: Number): Bitmap {
     return background
 }
 
-fun Float.scale(numberDigitsAfterComma:Int):Float{
-    return BigDecimal(this.toDouble()).setScale(numberDigitsAfterComma, BigDecimal.ROUND_HALF_EVEN).toFloat()
+fun Float.scale(numberDigitsAfterComma: Int): Float {
+    return BigDecimal(this.toDouble()).setScale(numberDigitsAfterComma, BigDecimal.ROUND_HALF_EVEN)
+        .toFloat()
 }
